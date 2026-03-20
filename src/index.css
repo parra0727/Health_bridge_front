@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    @apply bg-hb-dark text-white font-sans;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-hb-darkMid;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-hb-teal rounded-full;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-hb-teal hover:bg-hb-tealLight text-white font-semibold 
+           py-2.5 px-6 rounded-lg transition-all duration-200 
+           active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-hb-darkCard hover:bg-hb-darkMid text-white font-semibold
+           py-2.5 px-6 rounded-lg border border-hb-teal transition-all 
+           duration-200 active:scale-95;
+  }
+
+  .btn-mint {
+    @apply bg-hb-mint hover:opacity-90 text-hb-dark font-semibold
+           py-2.5 px-6 rounded-lg transition-all duration-200 active:scale-95;
+  }
+
+  .card {
+    @apply bg-hb-darkMid rounded-xl border border-hb-darkCard 
+           shadow-lg p-6;
+  }
+
+  .input-field {
+    @apply w-full bg-hb-darkCard border border-hb-darkCard 
+           focus:border-hb-teal focus:ring-1 focus:ring-hb-teal
+           text-white placeholder-hb-textDim rounded-lg px-4 py-3 
+           outline-none transition-all duration-200;
+  }
+
+  .badge-success {
+    @apply bg-green-900/30 text-green-400 border border-green-800 
+           text-xs font-medium px-2.5 py-1 rounded-full;
+  }
+
+  .badge-warning {
+    @apply bg-yellow-900/30 text-yellow-400 border border-yellow-800 
+           text-xs font-medium px-2.5 py-1 rounded-full;
+  }
+
+  .badge-danger {
+    @apply bg-red-900/30 text-red-400 border border-red-800 
+           text-xs font-medium px-2.5 py-1 rounded-full;
+  }
+
+  .badge-teal {
+    @apply bg-hb-teal/20 text-hb-mint border border-hb-teal/30
+           text-xs font-medium px-2.5 py-1 rounded-full;
+  }
+
+  .sidebar-item {
+    @apply flex items-center gap-3 px-4 py-3 rounded-lg
+           text-hb-textMuted hover:text-white hover:bg-hb-darkCard
+           transition-all duration-200 cursor-pointer;
+  }
+
+  .sidebar-item-active {
+    @apply flex items-center gap-3 px-4 py-3 rounded-lg
+           text-white bg-hb-teal/20 border-l-2 border-hb-mint
+           font-medium;
+  }
+}
